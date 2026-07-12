@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+    <head>
+        <!-- Informações do cabeçalho (Título da página, descrição, etc.) -->
+        <meta charset="UTF-8">
+        <meta
+            name="description"
+            content="Página de contato de Pedro Lucas, contendo informações para entrar em contato."
+        >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contato - Pedro Lucas</title>
+    </head>
+
+    <body>
+
+        <!-- Linha de separação (AZUL ESCURO) -->
+        <hr color="#00008B">
+
+        <!-- Início do header -->
+        <header>
+            <h1>Contato - Pedro Lucas Almeida dos Santos</h1>
+
+            <!-- Barra de navegação -->
+            <nav>
+                <a href="main_page.html">Início</a>
+                <a href="pedro_page.html">Perfil - Pedro Lucas</a>
+            </nav>
+
+        </header>
+        <!-- Fim do header -->
+
+        <!-- Linha de separação (AZUL ESCURO) -->
+        <hr color="#00008B">
+
+        <!-- Início da main -->
+        <main>
+            <br>
+            <!-- Seção para preenchimento do formulário para contato -->
+            <section id="Formulario">
+                <form
+                    action="https://formspree.io/f/xrewnbjr"
+                    method="POST"
+                >
+                    <p>Preencha o formulário abaixo para entrar em contato com Pedro Lucas: </p>
+
+                    <label for="nome">Nome:&nbsp;</label>
+                    <input
+                        type="text"
+                        name="nome" 
+                        placeholder="Nome"
+                        required
+                    > <br><br>
+
+                    <label for="email">Email: &nbsp;</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="E-mail"
+                        required
+                    > <br><br>
+
+                    <label for="telefone">Tel: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input
+                        type="tel"
+                        name="telefone"
+                        placeholder="Telefone"
+                    > <br><br>
+
+                    <label for="mensagem">Mensagem:</label><br><br>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        placeholder="Mensagem"
+                        style="resize: none;"
+                        cols="70"
+                        rows="10"
+                        required
+                    ></textarea> <br>
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+            </section>
+
+            <!-- Linha de separação (AZUL ESCURO) -->
+            <hr color="#00008B">
+
+            <!-- Seção do Video de desafio -->
+            <section id="Video">
+                <br>
+                <video
+                    width="350"
+                    autoplay
+                    loop
+                >
+                    <source 
+                        src="./assets/video.mp4"
+                        type="video/mp4"
+                    >
+                </video>
+
+            </section>
+        </main>
+
+        <!-- Linha de separação (AZUL ESCURO) -->
+        <hr color="#00008B">
+
+        <!-- Início do footer -->
+        <footer>
+            <div>
+                <nav>
+                    <h4>Acessos rápidos:</h4>
+                        <img
+                            src="./assets/Logo_git.png"
+                            alt="Logo do GitHub"
+                            width="30px"
+                            ><a
+                                href="https://github.com/Gurkan22"
+                                target="blank"
+                            >Github</a>
+
+                        <img
+                            src="./assets/Logo_instagram.webp"
+                            alt="Logo do Instagram"
+                            width="30px"
+                            ><a
+                                href="https://www.instagram.com/pe_almeida_/"
+                                target="_blank"
+                            >Instagram</a>
+
+                        <img
+                            src="./assets/Logo_contato.png"
+                            alt="Logo do Contato"
+                            width="25px"
+                            ><a
+                                href="pedro_contato.html"
+                                target="_blank"
+                            >Contato</a>
+                </nav>
+            </div>
+        </footer>
+        <!-- Fim do footer -->
+
+    </body>
+
+</html>

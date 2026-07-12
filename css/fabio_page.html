@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Perfil-Fábio Luiz</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Fábio Luiz Gonçalves Filho</h1>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icon">
+            ☰
+        </label>
+        
+        <nav>
+            <a href="main_page.html">Início</a>
+            <a href="#sobre-mim">Quem sou</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#feedback-form">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="sobre-mim">
+
+            <img src="assets/Foto_fabio.jpg" alt="Fábio Luiz" class="foto-perfil">
+            
+            <article>
+                <h2>Sobre mim:</h2>
+                <p>
+                    Prazer, tenho 21 anos e sou um estudante de Ciência da Computação na UFF. <br>
+                    Sou amante de música e um pouco nerd, sempre procurando aprender coisas novas. <br> 
+                    Já fiz parte do Diretório Acadêmico de Computação por dois anos, e hoje faço uma iniciação cientifica. <br>
+                    Nas horas vagas eu gosto de jogar videogames. <br>
+                </p>
+            </article>
+
+        </section>
+
+        <section id="hobbies">
+            
+            <div class="hobby-container">
+                <div class="card-container">
+                    <h2>Hobbies</h2>
+                    <ul>
+                        <li>Tocar Guitarra</li>
+                        <li>Jogar</li>
+                        <li>Assistir filmes de terror</li>
+                        <li>Ouvir Música</li>
+                        <li>Ler livros</li>
+                    </ul>
+                </div>
+        
+                <div class="card-container">
+                    <h2>Ranking de álbum de música</h2>
+
+                    <ol>
+                        <li>Holy Wars... The Punishment Due</li>
+                        <li>Tornado of Souls</li>
+                        <li>Lucretia</li>
+                        <li>Hangar 18</li>
+                        <li>Take No Prisoners</li>
+                    </ol>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="feedback-form">
+            <div id="form-container">
+                <div>
+                    <h2>Feedbacks</h2>
+                    <p>Insira o seu feedback aqui no formulário ao lado!</p>
+                </div>
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="16d1b1ac-d633-4411-8534-31f36dd0b43a">
+                    <p>Nome:</p>
+                    <input type="text" name="name" id="form_name" placeholder="Nome completo" size="50"><br>
+                    <p>Descrição:</p>
+                    <textarea name="feedback_text" id="feedback_input" placeholder="Feedback" rows="5" cols="50"></textarea><br>
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <button>Enviar</button><br>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <nav>
+            <div>
+                
+                <a href="https://github.com/lugon-hex" target="_blank">
+                    <img src="./assets/Logo_git.png" alt="Logo do GitHub">
+                </a>
+                
+                
+                <a href="main_page.html" target="_blank">
+                    <img src="./assets/Logo_instagram.webp" alt="Logo do Instagram">
+                </a>
+
+                <a href="fabio_contato.html" target="_blank">
+                    <img src="./assets/Logo_contato.png" alt="Logo do Contato">
+                </a>
+
+            </div>
+
+            <a href="fabio_contato.html">Entrar em contato</a>
+        </nav>
+
+    </footer>
+</body>
+</html>
