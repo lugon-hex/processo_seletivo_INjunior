@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="script.js" defer></script>
+    <title>DOM</title>
+</head>
+<body>
+    <header>
+        <h1>Lista de Compras</h1>
+        <p id="total-itens">0 itens</p>
+    </header>
+
+    <main>
+        <section id="zero-state">
+
+            <img src="assets/icons8-carrinho-de-compras-96.png" alt="carrinho de compras" id="cart-icon">
+
+            <h2>Nenhum item na lista ainda</h2>
+
+            <p>Toque em "+ Adicionar item" para começar</p>
+
+        </section>
+
+        <ul id="main-list" class="product-list hidden"></ul>
+
+        <div id="main-buttons">
+
+            <button id="main-add" class="hides-main">
+                + Adicionar item
+            </button>
+
+            <button id="main-edit" class="hides-main">
+                <img src="assets/icons8-editar-64.png" alt="">
+                Editar Lista
+            </button>
+        </div>
+
+    </main>
+
+    <dialog id="add-modal">
+        <div class="top-dialog">
+            <h2>Adicionar item</h2>
+            <button class="exit-btn shows-main" type="button">X</button>
+        </div>
+        
+        <form id="market-form">
+
+            <label for="nome-item">NOME DO ITEM</label>
+            <input type="text" id="nome-item" name="name" placeholder="Ex: Leite integral" required>
+
+            <label for="qtd-item">QUANTIDADE (OPCIONAL)</label>
+            <input type="text" id="qtd-item" name="qty" placeholder="Ex: 2 unidades, 500g...">
+
+            <div class="modal-buttons">
+
+            <button type="button" class="exit-btn shows-main">Cancelar</button>
+            <button type="submit">Adicionar</button>
+
+        </div>
+        </form>
+    </dialog>
+
+    <dialog id="edit-modal">
+
+        <div class="top-dialog">
+            <h2>Editar lista</h2>
+            <button class="exit-btn shows-main" type="button">X</button>
+        </div>
+
+        <ul id="edit-list" class="product-list"></ul>
+
+        <button class="exit-btn shows-main">Concluir</button>
+
+    </dialog>
+
+</body>
+</html>

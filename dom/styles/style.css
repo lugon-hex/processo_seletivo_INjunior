@@ -1,0 +1,383 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: rgb(23, 65, 196);
+    margin: 0;
+    padding: 0 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#total-itens {
+    color:#fff;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    min-height: 70vh;
+}
+
+#zero-state{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#cart-icon{
+    margin-bottom: 16px;
+}
+
+#zero-state h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+#zero-state p{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+#main-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 700px;
+}
+
+#main-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 24px;
+    border: none;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#main-buttons button:hover {
+    opacity: 0.9;
+}
+
+#main-add{
+    background-color: #facc15; 
+    color: #1e40af;
+    flex: 1.7;
+}
+
+#main-edit{
+    background-color: #65a30d;
+    color: #ffffff;
+    flex: 1;
+}
+
+#main-edit img{
+    object-fit: contain;
+}
+
+#main-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 700px;
+}
+
+#main-list li {
+    background-color: #65a30d;
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+}
+
+#main-list li p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#main-list li p::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #facc15;
+    border-radius: 50%;
+}
+
+#main-list li span {
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+#main-list li span:empty,
+#edit-list li span:empty {
+    display: none;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 90%;
+    max-width: 500px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 0 1em rgba(15, 23, 42, 0.3);
+}
+
+dialog::backdrop {
+    background-color: rgba(15, 23, 42, 0.6);
+}
+
+dialog h2 {
+    color: #0f172a;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 24px 0;
+}
+
+.top-dialog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.top-dialog h2 {
+    margin: 0;
+}
+
+.top-dialog button {
+    background-color: #f1f5f9;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 0;
+}
+
+.top-dialog button:hover {
+    background-color: #e2e8f0;
+}
+
+.top-dialog button img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+#add-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-modal label {
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+#add-modal input {
+    background-color: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: #334155;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#add-modal input::placeholder {
+    color: #cbd5e1;
+}
+
+#add-modal input:focus {
+    border-color: #3b82f6;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.modal-buttons button {
+    border: none;
+    border-radius: 12px;
+    padding: 14px 0;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-buttons button:hover {
+    opacity: 0.9;
+}
+
+.modal-buttons .exit-btn {
+    background-color: #f1f5f9;
+    color: #64748b;
+    flex: 1;
+}
+
+.modal-buttons button:not(.exit-btn) {
+    background-color: #1d4ed8;
+    color: #ffffff;
+    flex: 2;
+}
+
+#edit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+#edit-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#edit-list li:last-child {
+    border-bottom: none;
+}
+
+#edit-list li p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#edit-list li p::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #94a3b8;
+    border-radius: 50%;
+}
+
+#edit-list li div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#edit-list li span {
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+
+#edit-list li button {
+    background-color: #ef4444;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 0;
+}
+
+#edit-list li button:hover {
+    background-color: #dc2626;
+}
+
+#edit-list li button img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+#edit-modal > .exit-btn {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 0;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #1d4ed8;
+    color: #ffffff;
+    transition: opacity 0.2s;
+}
+
+#edit-modal .exit-btn.shows-main:hover {
+    opacity: 0.9;
+}
